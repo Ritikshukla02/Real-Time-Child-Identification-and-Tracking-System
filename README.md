@@ -1,2 +1,2 @@
 # Real-Time-Child-Identification-and-Tracking-System
-Pose-aware child face recognition pipeline (ICIET 2026 Under Publication)
+A Multi-Stage Deep Learning and Computer Vision Framework for Robust Child Identification in Kindergarten(ICIET 2026 Under Publication)

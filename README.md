@@ -1,6 +1,8 @@
 # Real-Time-Child-Identification-and-Tracking-System
 A Multi-Stage Deep Learning and Computer Vision Framework for Robust Child Identification in Kindergarten (ICIET 2026 **Under Publication**)
 
+---
+
 A real-world pipeline for identifying and tracking children in kindergarten CCTV footage using face recognition and temporal consistency.
 
 **Identification Accuracy: 78.78%**  

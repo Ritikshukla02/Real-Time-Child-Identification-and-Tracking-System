@@ -5,7 +5,9 @@
 ## Overview
 
 This system is designed to identify and track children in real-world CCTV footage.
+
 Instead of relying on a single frame, it combines detection, tracking, and face recognition across multiple frames to make stable identity decisions.
+
 Each child is first detected and tracked, and then identified using face embeddings when possible.
 
 ---
@@ -15,6 +17,7 @@ Each child is first detected and tracked, and then identified using face embeddi
 ### 1. Body Detection (YOLOv8)
 
 Each video frame is processed using YOLOv8 to detect all children present in the scene.
+
 This step ensures that even if the face is not visible, the system can still track the person.
 
 ---
@@ -22,6 +25,7 @@ This step ensures that even if the face is not visible, the system can still tra
 ### 2. Tracking (SORT)
 
 Once bodies are detected, SORT assigns a unique **Track ID** to each child.
+
 This allows the system to follow the same child across multiple frames.
 
 ---
@@ -29,6 +33,7 @@ This allows the system to follow the same child across multiple frames.
 ### 3. Face Detection (DSFD)
 
 Within each tracked bounding box, DSFD is used to detect the face.
+
 If no face is detected (e.g., back pose), the system skips identification but continues tracking.
 
 ---
@@ -36,6 +41,7 @@ If no face is detected (e.g., back pose), the system skips identification but co
 ### 4. Embedding Extraction (FaceNet512)
 
 When a face is detected, it is converted into a numerical representation (embedding).
+
 This embedding captures the unique facial features of the child.
 
 ---
@@ -57,6 +63,7 @@ This reduces noise caused by:
 ### 6. Identity Matching
 
 The averaged embedding is compared with stored reference embeddings using **cosine similarity**.
+
 The system selects the most similar identity.
 
 ---
@@ -94,7 +101,8 @@ This improves both stability and efficiency.
 
 To handle appearance changes:
 - Embeddings are updated using Exponential Moving Average  
-- α = 0.12  
+- α = 0.12
+  
 This allows gradual adaptation over time.
 
 ---
@@ -108,5 +116,6 @@ This pipeline shifts from:
 ✅ Multi-frame, memory-based identification (stable)
 
 ---
+## Visual Flow of Pipeline
 
 ![System Pipeline](../images/system_pipeline.png)

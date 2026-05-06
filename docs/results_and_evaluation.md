@@ -27,7 +27,7 @@ The proposed system achieves nearly **2× improvement** over the baseline.
 
 ## Baseline vs Proposed System
 
-![Baseline vs Proposed](../images/Baseline vs proposed_result.png)
+![Baseline vs Proposed](../images/ Baseline vs proposed_result.png)
 
 The baseline approach relies on single-frame predictions, which leads to:
 

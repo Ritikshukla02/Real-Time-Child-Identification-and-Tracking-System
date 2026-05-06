@@ -27,7 +27,7 @@ The proposed system achieves nearly **2× improvement** over the baseline.
 
 ## Baseline vs Proposed System
 
-![Baseline vs Proposed](../images/baseline vs proposed_result)
+![Baseline vs Proposed](../images/Baseline vs proposed_result.png)
 
 The baseline approach relies on single-frame predictions, which leads to:
 
@@ -45,7 +45,7 @@ In contrast, the proposed system uses temporal consistency, resulting in:
 
 ## Confusion Matrix Analysis
 
-![Confusion Matrix](../images/confusion_matrix.png)
+![Confusion Matrix](../images/Confusion_matrix.png)
 
 From the confusion matrix, we can observe:
 
